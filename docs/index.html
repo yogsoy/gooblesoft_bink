@@ -1,8 +1,32 @@
 <!DOCTYPE html>
 <html>
+	<style>
+		h1 {
+			font-family: "Oswald";
+			font-size: 50px;
+			text-align: center;
+		}
+		form {
+			text-align: center;
+			font-family: "Raleway";
+		}
+	</style>
 	<head>
-			<form class="search" method="get" action="https://www.bing.com/search">
+		<link href="https://fonts.googleapis.com/css?family=Fresca|Oswald|Raleway" rel="stylesheet">
+		<title>Gooblesoft Bink</title>
+		<h1><b>Gooblesoft Bink - We put the "bink" in "BINK"</b></h1>
+		<form class="search" method="get" action="https://www.bing.com/search">
+				<b>Search with:</b>
+				<input type="radio" name="engine" value="bing">Bing
+				<input type="radio" name="engine" id="google" value="google">Google
 				<input type="search" name="q" size="40" value="" placeholder="Search with Bink">
-			</form>
+				<script>
+  				  function googlebing()
+  				  {
+     				   if(document.getElementById("google").checked) {window.location.replace("failure.html")}
+				  }
+				</script>
+				<input type="submit" onclick="googlebing();">
+		</form>
 	</head>
 </html>
