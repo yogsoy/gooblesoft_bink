@@ -19,11 +19,11 @@
 				<b>Search with:</b>
 				<input type="radio" name="engine" value="bing">Bing
 				<input type="radio" name="engine" id="google" value="google">Google
-				<input type="search" name="q" size="40" value="" placeholder="Search with Bink">
+				<input type="search" name="q" size="40" value="" placeholder="Search through Bink">
 				<script>
   				  function googlebing()
   				  {
-     				   if(document.getElementById("google").checked) {window.location.replace("failure.html")}
+     				   if(document.getElementById("google").checked) {window.location.href="failure.html"}
 				  }
 				</script>
 				<input type="submit" onclick="googlebing();">
