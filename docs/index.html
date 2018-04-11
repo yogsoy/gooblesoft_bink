@@ -10,23 +10,30 @@
 			text-align: center;
 			font-family: "Raleway";
 		}
+		input {
+			font-family: "Raleway";
+		}
 	</style>
 	<head>
 		<link href="https://fonts.googleapis.com/css?family=Fresca|Oswald|Raleway" rel="stylesheet">
 		<title>Gooblesoft Bink</title>
 		<h1><b>Gooblesoft Bink - We put the "bink" in "BINK"</b></h1>
-		<form class="search" method="get" action="https://www.bing.com/search">
+		<form class="search" method="get" action="https://bing.com/">
+				<script>
+					function googlebing() {
+						if(document.getElementById("google").checked) {
+							window.location.href="failure.html"
+						}
+						else {
+							document.binkSearch.submit()
+						}
+					}
+				</script>
 				<b>Search with:</b>
 				<input type="radio" name="engine" value="bing">Bing
 				<input type="radio" name="engine" id="google" value="google">Google
 				<input type="search" name="q" size="40" value="" placeholder="Search through Bink">
-				<script>
-  				  function googlebing()
-  				  {
-     				   if(document.getElementById("google").checked) {window.location.href="failure.html"}
-				  }
-				</script>
-				<input type="submit" onclick="googlebing();">
+				<input type="button" value="Search" onclick="googlebing();">
 		</form>
 	</head>
 </html>
