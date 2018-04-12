@@ -1,7 +1,20 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<button onclick="window.location.href='index.html'">< Back</button><br>
+		<!-- if there is 1 or more page in history, go back, if not, go to index page. -->
+		<script>
+			var historyLength = history.length;
+			function goback() {
+				if(historyLength >= 1) {
+					window.history.back()
+				}
+				else {
+				window.location.href="index.html"
+				}
+			}
+			document.getElementById("yeet").innnerHTML = historyLength;
+		</script>
+		<button onclick="goback()">< Back</button><p id="yeet"></p><br>
 		haha i can't be bothered to develop a way to search with google, the joke is that bink is similar to bing
 	</head>
 </html>
